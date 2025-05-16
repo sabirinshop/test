@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পণ্যের বিবরণ - ডিজিটাল দোকান</title> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/product-detail-page.css"> 
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="logo-placeholder">
+             <a href="index.html">লোগো</a>
+        </div>
+        <div class="shop-name-display">
+            <a href="index.html">ডিজিটাল দোকান</a>
+        </div>
+        <div class="hamburger-menu-placeholder">
+            &#9776; 
+        </div>
+    </header>
+
+    <nav class="main-navigation" id="mainNav">
+        <ul>
+            <li><a href="index.html">হোম</a></li>
+            <li><a href="index.html#categories-section">ক্যাটেগরি</a></li>
+            <li><a href="index.html#brands-section">ব্র্যান্ড</a></li>
+            <li><a href="cart.html">কার্ট</a></li> <li><a href="#" id="contactLink">যোগাযোগ</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="page-section product-detail-section">
+            <div id="product-detail-container">
+                <p class="loading-text">পণ্যের বিবরণ লোড হচ্ছে...</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="contactPopup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <h3>যোগাযোগ মাধ্যম</h3>
+            <button id="fbContact">ফেসবুক</button>
+            <button id="imoContact">ইমো</button>
+            <button id="waContact">হোয়াটসঅ্যাপ</button>
+            <button id="phoneContact">ফোন</button>
+        </div>
+    </div>
+    
+    <script src="assets/js/brand_metadata.js"></script> 
+    <script defer src="assets/js/main.js"></script> 
+    <script defer src="assets/js/product-detail-loader.js"></script> 
+</body>
+</html>

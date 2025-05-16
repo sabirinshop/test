@@ -1,0 +1,85 @@
+/* Filename: assets/css/home-slider.css */
+
+.slider-container-dynamic {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Adjust as needed, or make it full-width */
+    margin: 0 auto; /* Center the slider if max-width is set */
+    overflow: hidden; /* Crucial for sliding effect */
+    border-radius: 8px; /* Optional: rounded corners for the slider */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    min-height: 200px; /* Minimum height before images load */
+    background-color: #f0f0f0; /* Placeholder background */
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animation for sliding */
+}
+
+.slider-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slider-slide img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 450px; /* Adjust max height for your design */
+    object-fit: cover; /* Cover ensures the image fills the slide area, might crop */
+    display: block; /* Remove extra space below image */
+}
+
+/* Slider Navigation Buttons (Prev/Next) */
+.slider-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+.slider-nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.slider-nav-button.prev {
+    left: 10px;
+}
+.slider-nav-button.next {
+    right: 10px;
+}
+
+/* Slider Dots (Navigation) */
+.slider-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.slider-dot:hover,
+.slider-dot.active {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Hide the original placeholder text if JS is active */
+#slider-section .slider-placeholder {
+    display: none; /* JS will replace this */
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ডিজিটাল দোকান</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/home-slider.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/home-map.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="logo-placeholder">
+            লোগো
+        </div>
+        <div class="shop-name-display">
+            ডিজিটাল দোকান
+        </div>
+        <div class="hamburger-menu-placeholder">
+            &#9776; </div>
+    </header>
+
+    <nav class="main-navigation" id="mainNav">
+        <ul>
+            <li><a href="index.html">হোম</a></li>
+            <li><a href="#categories-section">ক্যাটেগরি</a></li>
+            <li><a href="#brands-section">ব্র্যান্ড</a></li>
+            <li><a href="cart.html">কার্ট</a></li> <li><a href="#" id="contactLink">যোগাযোগ</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section id="slider-section" class="homepage-section">
+            <h2 class="section-title">স্লাইডার</h2>
+            <div class="slider-placeholder">
+                <p>এখানে ছবির স্লাইডার থাকবে। (বাস্তবায়ন করা হবে)</p>
+                </div>
+        </section>
+
+        <section id="categories-section" class="homepage-section">
+            <h2 class="section-title">পণ্য তালিকা</h2>
+            <div id="categories-container" class="items-grid">
+                </div>
+        </section>
+
+        <section id="brands-section" class="homepage-section">
+            <h2 class="section-title">ব্র্যান্ডসমূহ</h2>
+            <div id="brands-container" class="items-grid">
+                </div>
+        </section>
+
+        <section id="map-section" class="homepage-section">
+            <h2 class="section-title">আমাদের ঠিকানা</h2>
+            <div class="map-placeholder">
+                <p>এখানে গুগল ম্যাপ এমবেড করা হবে। (বাস্তবায়ন করা হবে)</p>
+                </div>
+        </section>
+
+        <section id="help-contact-section" class="homepage-section">
+            <h2 class="section-title">সাহায্য ও যোগাযোগ</h2>
+            <button id="whatsappHelpButton">হোয়াটসঅ্যাপে যোগাযোগ করুন</button>
+        </section>
+    </main>
+
+    <div id="contactPopup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <h3>যোগাযোগ মাধ্যম</h3>
+            <button id="fbContact">ফেসবুক</button>
+            <button id="imoContact">ইমো</button>
+            <button id="waContact">হোয়াটসঅ্যাপ</button>
+            <button id="phoneContact">ফোন</button>
+        </div>
+    </div>
+    
+    <script src="assets/js/brand_metadata.js"></script>
+    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/home-map-loader.js"></script>
+    <script defer src="assets/js/home-slider.js"></script>
+
+</body>
+</html>

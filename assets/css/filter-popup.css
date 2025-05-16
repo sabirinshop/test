@@ -1,0 +1,124 @@
+/* Filename: assets/css/filter-popup.css */
+
+.filter-popup-overlay {
+    display: none; /* Hidden by default, shown by JS */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1002; /* Higher than other popups like contact, if necessary */
+    padding: 15px;
+}
+
+.filter-popup-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px; /* Adjust as needed */
+    max-height: 80vh; /* Max height */
+    overflow-y: auto; /* Allow scrolling for many brands */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: relative; /* For close button positioning */
+}
+
+.filter-popup-content h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.filter-popup-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    line-height: 1;
+}
+.filter-popup-close:hover {
+    color: #333;
+}
+
+.brand-filter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.brand-filter-list li {
+    margin-bottom: 12px;
+}
+
+.brand-filter-list label {
+    display: flex; /* Align checkbox and text nicely */
+    align-items: center;
+    font-size: 1.05em;
+    color: #444;
+    cursor: pointer;
+}
+
+.brand-filter-list input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px; /* Custom checkbox size */
+    height: 18px;
+    cursor: pointer;
+    accent-color: #007bff; /* Modern way to color checkbox */
+}
+.brand-filter-list input[type="checkbox"]:focus {
+    outline: 2px solid #007bff60; /* Focus outline */
+}
+
+
+.filter-popup-actions {
+    display: flex;
+    justify-content: space-between; /* Or flex-end for buttons on one side */
+    gap: 10px; /* Space between buttons */
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.filter-popup-actions button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Noto Sans Bengali', sans-serif;
+    border: 1px solid transparent;
+    font-weight: bold;
+}
+
+.filter-popup-actions .apply-filters-btn {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+.filter-popup-actions .apply-filters-btn:hover {
+    background-color: #0056b3;
+}
+
+.filter-popup-actions .clear-filters-btn {
+    background-color: #6c757d;
+    color: white;
+    border-color: #6c757d;
+}
+.filter-popup-actions .clear-filters-btn:hover {
+    background-color: #545b62;
+}
+
+.no-brands-message {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+}

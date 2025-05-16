@@ -1,0 +1,165 @@
+/* Filename: assets/css/responsive.css */
+
+/* Common Mobile First Styles (already in main.css, but can be reinforced or specifically targeted) */
+/* Base styles are mobile-first. These queries adjust for larger screens. */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .main-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .section-title {
+        font-size: 1.7em; /* Slightly larger on small+ screens */
+    }
+    .items-grid { /* For categories and brands on homepage */
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+    .product-grid-on-category-page, 
+    .brand-product-grid { /* For product listings */
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+    .product-card .product-name {
+        font-size: 1.05em;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .top-bar {
+        padding: 12px 30px;
+    }
+    .shop-name-display {
+        font-size: 1.4em; /* As in main.css, can be fine-tuned */
+    }
+    .main-content {
+        padding-top: 80px; /* Adjust if top-bar height changes */
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .section-title {
+        font-size: 2em; /* From main.css, good for tablets */
+    }
+    .items-grid { /* Homepage category/brand blocks */
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 20px;
+    }
+    .product-grid-on-category-page,
+    .brand-product-grid { /* Product listings */
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 20px;
+    }
+    .filters-toolbar {
+        flex-direction: row; /* Ensure horizontal layout */
+        align-items: center;
+    }
+    .search-input {
+        margin-bottom: 0; /* Remove bottom margin if filters are side-by-side */
+        margin-right: 15px; 
+    }
+    .filter-controls {
+        width: auto; /* Allow natural width */
+    }
+
+    /* Product Detail Page Layout */
+    .product-layout { /* Defined in product-detail-page.css */
+        grid-template-columns: 1fr 1.2fr; 
+        gap: 40px; 
+    }
+    .product-title-detail { font-size: 2.4em; }
+    .product-price-detail { font-size: 2em; }
+
+    /* Cart Page */
+    .cart-item {
+        flex-direction: row; /* Ensure horizontal layout */
+        align-items: flex-start;
+        text-align: left;
+    }
+    .cart-item-image img {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+    .cart-item-actions {
+        margin-left: auto;
+        width: auto;
+        margin-top: 0;
+        text-align: right;
+    }
+     .cart-item-actions .remove-item-btn {
+        width: auto;
+    }
+    #cart-summary-and-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Summary and form side-by-side */
+        gap: 30px;
+        align-items: start;
+    }
+    .customer-info-form { margin-bottom: 0; } /* Remove bottom margin when side-by-side */
+    .action-button.place-order {
+         grid-column: 1 / -1; /* Make button span both columns */
+         margin-top: 10px;
+    }
+
+    /* Slider */
+    .slider-slide img {
+        max-height: 500px; /* Allow taller slider on larger screens */
+    }
+     .slider-nav-button {
+        padding: 12px 18px;
+        font-size: 1.8em;
+    }
+    .slider-dot {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .main-navigation { /* Hamburger menu width */
+        width: 280px;
+    }
+    .main-content {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+    .product-grid-on-category-page,
+    .brand-product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Larger product cards */
+    }
+    .product-card .product-name {
+        font-size: 1.1em; /* From category-page.css, ensure consistency */
+    }
+    .product-layout { /* Product detail */
+        gap: 50px;
+    }
+    /* Slider */
+    .slider-slide img {
+        max-height: 550px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .main-content, #product-detail-container, .filters-toolbar {
+        max-width: 1140px; /* Max container width for content */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* If #product-detail-container has its own max-width, this might not be needed here for it */
+    
+    .items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .product-grid-on-category-page,
+    .brand-product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    /* Slider */
+    .slider-slide img {
+        max-height: 600px;
+    }
+}
